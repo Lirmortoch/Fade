@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --font-family: "Lato", sans-serif;
+    --second-family: "Playfair Display", sans-serif;
+
+    --main-color: #ffffff;
+    --second-color: #000000;
+    --third-color: #f2c03f;
+
+    --main-gradient: linear-gradient(152deg, rgba(101, 78, 163, 0.87) 24.86%, rgba(95, 75, 139, 0.87) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--main-gradient);
+    font-size: 1.125rem;
+    color: var(--main-color);
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.header {
+    
+}
+.header__logo {
+    background-color: var(--main-color);
+    width: 14.44%;
+    height: 100%;
+}
+.header__nav {
+}
+.nav {
+    margin-left: 50px;
+    font-weight: 700;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.nav__link {
+    
+}
+.current {
+    position: relative;
+}
+.current::after {
+    content: '';
+
+    height: 16px;
+    width: 120px;
+
+    position: absolute;
+    z-index: -1;
+
+    top: 0.556em;
+    left: -0.82em;
+
+    background-color: var(--third-color);
+    opacity: 0.75;
+}
+.header__lang-switch {
+}
+.lang-switch {
+}
+.lang-switch__text {
+}
+.lang-switch__arrow {
+}
+.wrap {
+}
+.bfw {
+}
+.left-side-decor {
+}
+.left-side-decor__line {
+}
+.line {
+}
+.left-side-decor__data {
+}
+.data {
+}
+.data__value {
+}
+.bold {
+}
+.data__arrows {
+}
+.main {
+}
+.main__tag {
+    color: var(--third-color);
+}
+.main__title {
+}
+
+.title {
+    font-family: var(--second-family);
+    font-size: 4em;
+}
+
+.main__about {
+}
+.about {
+}
+.about__item {
+}
+.about__icon {
+}
+.about__text {
+    opacity: 0.74;
+}
+.small__text {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+.about__line {
+}
+.main__buy-tickets {
+    
+}
+.buy-tickets {
+    
+}
+.buy-tickets__text {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+.buy-tickets__arrow {
+    background-color: var(--third-color);
+}
+.right-side-decor {
+}
+.right-side-decor__frame {
+}
+.right-side-decor__switch {
+
+}
+
+.photo-switch__item {
+    border: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+.photo-switch__item svg {
+    max-width: 100%;
+    height: auto;
+    color: var(--main-color);
+    transition: 380ms;
+}
+
+.photo-switch__item svg:hover {
+    transform: scale(1.2);
+    color: var(--third-color);
+    cursor: pointer;
+}
+
+.right-side-decor__photo {
+}
+.footer {
+}
+.footer__social-links {
+}
+.social-links {
+    
+}
+.social-links__item {
+    
+}
+.social-links__item svg {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.32;
+    transition: 380ms;
+}
+.social-links__item svg:hover {
+    opacity: 1;
+    color: var(--third-color);
+    transform: scale(1.2);
+}
