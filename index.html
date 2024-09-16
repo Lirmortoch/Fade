@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Blade</title>
 </head>
 <body>
     <header class="header">
-        <img src="img/logos/blade.svg" alt="site logo" class="header__logo">
+        <div class="header__logo">
+            <img src="img/logos/blade.svg" alt="site logo" class="header__logo">
+        </div>
      
         <nav class="header__nav nav uppercase">
             <a href="" class="nav__link current">Главная</a>
@@ -25,7 +28,11 @@
         <div class="header__lang-switch lang-switch">
             <span class="lang-switch__text">Рус</span>
 
-            <div class="lang-switch__arrow"></div>
+            <button class="lang-switch__arrow">
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 0H1.13736H0L4.5 6L9 0Z"/>
+                </svg>
+            </button>
         </div> 
     </header>
 
