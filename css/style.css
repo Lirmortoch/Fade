@@ -29,11 +29,11 @@ button {
 }
 
 .header {
-    
     display: flex;
+    justify-content: space-between;
     flex-flow: row nowrap;
     width: 93.75%;
-    margin: 0 80px 0 40px;
+    margin: 0 auto 0 40px;
     align-items: center;
     min-height: 72px;
     height: 145px;
@@ -47,19 +47,16 @@ button {
     padding: 51px 40px;
 }
 .header__nav {
-    /* margin: 0 122px 0 38.329%; */
+    
 }
 .nav {
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 3.583em;
 }
 .uppercase {
     text-transform: uppercase;
-}
-.nav__link {
-    margin-right: 3.611em;
-}
-.nav__link:last-child {
-    margin-right: 0px;
 }
 .current {
     position: relative;
@@ -97,16 +94,34 @@ button {
     transform: translateY(-50%);
 }
 .wrap {
+    position: relative;
+    margin: 0 auto 0 40px;
+    
 }
 .bfw {
+    margin-top: 55px;
+    width: 72.91%;
+    position: absolute;
+    left: -32px;
+    z-index: -1;
+}
+.bfw img {
+    width: 100%;
 }
 .left-side-decor {
+   
 }
 .left-side-decor__line {
+    height: 288px;
+    opacity: 0.5;
 }
 .line {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    width: 1px;
 }
 .left-side-decor__data {
+    
 }
 .data {
 }
@@ -115,6 +130,7 @@ button {
 .bold {
 }
 .data__arrows {
+    transform: rotate(-90deg);
 }
 .main {
 }
