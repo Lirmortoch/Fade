@@ -40,7 +40,6 @@ button {
 }
 .header__logo {
     background-color: var(--main-color);
-
     height: 100%;
 }
 .header__logo img {
@@ -50,10 +49,11 @@ button {
     
 }
 .nav {
-    font-weight: 600;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 3.583em;
+    margin: 0 5% 0 10%;
 }
 .uppercase {
     text-transform: uppercase;
@@ -96,47 +96,85 @@ button {
 .wrap {
     position: relative;
     margin: 0 auto 0 40px;
-    
+    display: flex;
 }
 .bfw {
     margin-top: 55px;
     width: 72.91%;
     position: absolute;
-    left: -32px;
+    left: -45px;
     z-index: -1;
 }
 .bfw img {
     width: 100%;
 }
+
+/* Этот блок можно сделать лучше, с помощью: 
+    1. Убрать отступ у обёртки и оставить её флекс
+    2. Этот отступ кинуть на элемент + учесть, что элемент должен находиться ровно на границе (тут хз, надо подумать)
+    3. Вместо того, чтобы крутить весь элемент целиком, сделать его флекс ? и повернуть только надпись
+    Сделать более красивое и элегантное решение + более правильное, чем это
+*/
+
 .left-side-decor {
-   
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    
+    display: grid;
+    grid-template-rows: auto 110px 1fr;
+    gap: 40px;
 }
+
 .left-side-decor__line {
-    height: 288px;
     opacity: 0.5;
 }
+
 .line {
     border: 1px solid var(--main-color);
-    color: var(--main-color);
     width: 1px;
 }
-.left-side-decor__data {
-    
+
+.top-line {
+    height: 288px;
 }
+
+.bottom-line {
+    height: 439px;
+}
+
+.left-side-decor__data {
+    transform: rotate(-90deg);
+    margin: -6.52px;
+    display: flex;
+    align-items: start;
+}
+
 .data {
 }
+
 .data__value {
+    margin: 0 23px 0 0;
 }
+
 .bold {
 }
+
 .data__arrows {
-    transform: rotate(-90deg);
+    
 }
+
+.data__arrows:first-of-type {
+    margin: 0 20px 0 0;
+}
+/* ---------------------------------------------------------------------------- */
 .main {
 }
+
 .main__tag {
     color: var(--third-color);
 }
+
 .main__title {
 }
 
