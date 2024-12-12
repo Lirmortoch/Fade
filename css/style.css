@@ -71,7 +71,7 @@ button {
     z-index: -1;
 
     top: 0.556em;
-    left: -20%;
+    left: -0.95em;
 
     background-color: var(--third-color);
     opacity: 0.75;
@@ -80,19 +80,31 @@ button {
     
 }
 .lang-switch {
+    opacity: 0.64;
+    background-color: transparent;
+    color: white;
 
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 .lang-switch__text {
     text-transform: uppercase;
 }
-.lang-switch__arrow {
-    color: white;
-    background-color: transparent;
-    position: relative;
+.caret {
+    width: 0;
+    height: 0;
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 7px solid white;
+
+    transition: all 0.3s ease 0s;
 }
-.lang-switch__arrow svg {
-    transform: translateY(-50%);
+.caret__rotate {
+    transform: rotate(180deg);
 }
+
 .wrap {
     position: relative;
     margin: 0 auto 0 40px;
