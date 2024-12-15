@@ -109,14 +109,14 @@ button {
     position: relative;
     margin: 0 auto 0 40px;
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 27px 27px 1fr
 }
 .bfw {
-    width: 76%;
+    width: 69%;
     position: absolute;
-    top: 15px;
-    left: -95px;
+    top: 55px;
+    left: -70px;
     z-index: -1;
 }
 .bfw img {
@@ -135,6 +135,9 @@ button {
     display: grid;
     grid-template-rows: auto 110px 1fr;
     gap: 40px;
+
+    
+    grid-row: 1 / 4;
 }
 
 .left-side-decor__line {
@@ -183,8 +186,7 @@ button {
 }
 
 .main-wrap {
-    
-
+    grid-row: 1 / 4;
 }
 
 .main__tag {
@@ -223,7 +225,6 @@ button {
 
 .about__text {
     opacity: 0.74;
-    
 }
 
 .small__text {
@@ -274,31 +275,35 @@ button {
 }
 
 .right-side-decor {
+    height: 100%;
     position: relative;
-    justify-self: end;
+    
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
 }
 
 .right-side-decor__wrap {
+    height: 100%;
     position: relative;
 }
 
 .right-side-decor__frame {
-    
+
 }
 
 .right-side-decor__photo {
+    height: 100%;
     position: absolute;
     right: 0;
-    top: 3%;
-    z-index: 1;
+    z-index: -1;
 }
 
 .right-side-decor__photo-switch {
     position: absolute;
     z-index: 9;
-    bottom: 0px;
+    bottom: 48px;
     right: 0;
-    margin: 0 80px 0 0;
+    margin: 0 88px 0 0;
 }
 
 .photo-switch__item {
