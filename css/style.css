@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-:root {
+html {
     --font-family: "Lato", sans-serif;
     --second-family: "Playfair Display", sans-serif;
 
@@ -15,7 +15,7 @@
 body {
     font-family: var(--font-family);
     background: var(--main-gradient);
-    font-size: 1.125rem;
+    font-size: 1.125em;
     color: var(--main-color);
 }
 
@@ -53,7 +53,7 @@ button {
     display: flex;
     align-items: center;
     gap: 3.583em;
-    margin: 0 0 0 31em;
+    margin: 0 0 0 33.69789vw;
 }
 .uppercase {
     text-transform: uppercase;
@@ -64,8 +64,8 @@ button {
 .current::after {
     content: '';
 
-    height: 16px;
-    width: 120px;
+    height: 0.889em;
+    width: 6.667em;
 
     position: absolute;
     z-index: -1;
@@ -122,10 +122,6 @@ button {
 .bfw img {
     width: 100%;
 }
-
-/* Этот блок можно сделать лучше, с помощью: 
-    Разобраться с шириной и высотой этого блока (left decor) и подогнать под это остальные части блока
-*/
 
 .left-side-decor {
     width: -webkit-fit-content;
@@ -335,7 +331,6 @@ button {
 
 .footer {
     margin: 138px 0 48px 0;
-    
 }
 
 .footer__social-links {
@@ -362,4 +357,25 @@ button {
     opacity: 1;
     color: var(--third-color);
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 1900px) {
+    .nav {
+        margin: 0 0 0 calc(33.69789vw - 10vw);
+    }
+}
+@media screen and (max-width: 1800px) {
+    .nav {
+        margin: 0 0 0 calc(33.69789vw - 20vw);
+    }
+}
+@media screen and (max-width: 1600px) {
+    body {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .nav {
+        
+    }
 }
