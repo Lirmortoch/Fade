@@ -48,12 +48,16 @@ button {
 .header__nav {
     
 }
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 6.354vw;
+}
 .nav {
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 3.583em;
-    margin: 0 0 0 33.69789vw;
 }
 .uppercase {
     text-transform: uppercase;
@@ -109,14 +113,14 @@ button {
     position: relative;
     margin: 0 auto 0 40px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr 33.018vw;
     grid-template-rows: 27px 1fr
 }
 .bfw {
-    width: 70.5%;
+    width: 69.031vw;
     position: absolute;
     top: 85px;
-    left: -35px;
+    left: -1.823vw;
     z-index: -1;
 }
 .bfw img {
@@ -272,7 +276,6 @@ button {
 
 .right-side-decor {
     height: 100%;
-    position: relative;
     
     grid-row: 2 / 3;
 }
@@ -292,6 +295,7 @@ button {
 
 .right-side-decor__photo {
     height: 100%;
+
     position: absolute;
     right: 0;
     z-index: 1;
@@ -360,14 +364,10 @@ button {
 }
 
 @media screen and (max-width: 1900px) {
-    .nav {
-        margin: 0 0 0 calc(33.69789vw - 10vw);
-    }
+    
 }
 @media screen and (max-width: 1800px) {
-    .nav {
-        margin: 0 0 0 calc(33.69789vw - 20vw);
-    }
+    
 }
 @media screen and (max-width: 1600px) {
     body {
