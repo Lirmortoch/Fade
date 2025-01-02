@@ -191,7 +191,7 @@ button {
 
 .main__tag {
     color: var(--third-color);
-    margin: 160px 0 0 0;
+    margin: 8.333vw 0 0 0;
 }
 
 .main__title {
@@ -204,10 +204,10 @@ button {
 }
 
 .main__about {
-    margin-top: 80px;
+    margin-top: 4.444em;
     
     display: flex;
-    gap: 48px;
+    gap: 2.666em;
 }
 
 .about {
@@ -227,9 +227,12 @@ button {
     opacity: 0.74;
 }
 
-.small__text {
-    font-size: 0.5em;
-    vertical-align: super;
+.new-line-text {
+    display: block;
+}
+
+.sup__text {
+    
 }
 
 .about__line {
@@ -238,8 +241,9 @@ button {
 
 .main__buy-tickets {
     display: flex;
-    margin-top: 120px;
-    width: fit-content;
+    margin-top: 6.25vw;
+    width: 21.198vw;
+    height: 93px;
 }
 
 .main__buy-tickets:hover .buy-tickets__text {
@@ -247,7 +251,7 @@ button {
 }
 
 .main__buy-tickets * {
-   height: 93px;
+   height: 100%;
 }
 
 .buy-tickets {
@@ -255,7 +259,7 @@ button {
 }
 
 .buy-tickets__text {
-    width: 309px;
+    width: 73.71%;
 
     background-color: var(--main-color);
     color: var(--second-color);
@@ -266,7 +270,7 @@ button {
 }
 .buy-tickets__arrow {
     background-color: var(--third-color);
-    width: 107px;
+    width: 26.289%;
     text-align: center;
     vertical-align: middle;
 }
@@ -340,7 +344,7 @@ button {
 }
 
 .footer {
-    margin: 138px 0 48px 0;
+    margin: 7.188vw 0 2.5vw 0;
 }
 
 .footer__social-links {
@@ -370,18 +374,59 @@ button {
 }
 
 @media screen and (max-width: 1900px) {
-    
+  .main__tag {
+    margin-top: 5.833vw;
+  }
 }
 @media screen and (max-width: 1800px) {
-    
+    .footer {
+        margin-bottom: 2vw;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .main__about {
+        gap: 2em;
+    }
+    .main__title {
+        font-size: 3.5em;
+    }
+    .footer {
+        margin-bottom: 1.294vw;
+    }
 }
 @media screen and (max-width: 1600px) {
     body {
         font-size: 1em;
     }
+    .footer {
+        margin-top: 6.125vw;
+    }
+    .main__buy-tickets {
+        width: 25vw;
+    }
 }
 @media screen and (max-width: 1500px) {
-    .nav {
-        
+    .main__buy-tickets {
+        height: 81px;
     }
+    .main__title {
+        font-size: 3.5em;
+    }
+    .main__about {
+        margin-top: 3em;
+        flex-flow: column nowrap;
+        gap: 40px;
+    }
+    .about__line {
+       display: none;
+    }
+    .footer {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }
+}
+@media screen and (max-width: 1399px) {
+    
 }
