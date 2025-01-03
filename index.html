@@ -13,6 +13,12 @@
             <img src="img/logos/blade.svg" alt="site logo" class="header__logo">
         </div>
      
+        <div class="menu__icon">
+            <div class="menu__icon-wrap">
+                <span></span>
+            </div>
+        </div>
+
         <div class="header__menu menu">
             <nav class="menu__nav nav uppercase">
                 <a href="" class="nav__link current">Главная</a>
@@ -22,10 +28,23 @@
                 <a href="" class="nav__link">Контакты</a>
             </nav>
 
-            <button class="menu__lang-switch lang-switch">
-                <span class="lang-switch__text">Рус</span>
-                <span class="lang-switch__arrow caret"></span>
-            </button>
+            <div class="menu__lang-switch lang-switch" data-dropdown>
+                <button class="lang-switch__button lang-switch-btn" data-dropdown-button>
+                    <span class="lang-switch-btn__text uppercase">Рус</span>
+                    <span class="lang-switch-btn__arrow caret"></span>
+                </button>
+
+                <div class="lang-switch__languages dropdown__menu dropdown-content">
+                    <div class="lang-switch__rus lang-switch-language language current-language">
+                        <span class="language__flag"></span>
+                        <span class="language__text uppercase">Рус</span>
+                    </div>
+                    <div class="lang-switch__rus lang-switch-language language">
+                        <span class="language__flag"></span>
+                        <span class="language__text uppercase">Англ</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
