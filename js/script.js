@@ -32,3 +32,19 @@ function keepOpenDropMenu(e) {
 }
 
 document.addEventListener('click', keepOpenDropMenu);
+
+// Switch language 
+function switchLanguage(e) {
+    if (!e.target.classList.contains('language-btn') || e.target.classList.contains('current-language')) return;
+
+    const prevLanguage = document.querySelector('.current-language');
+    const buttonLanguage = document.querySelector('.dropdown__button');
+
+    prevLanguage.classList.remove('current-language');
+    
+    buttonLanguage.textContent = e.target.value;
+    
+    e.target.classList.add('current-language');
+}
+
+document.addEventListener('click', switchLanguage);

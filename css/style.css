@@ -95,10 +95,10 @@ button {
     align-items: center;
     gap: 4px;
 }
-.lang-switch-language {
+.language-btn {
     border-bottom: 1px solid rgba(255, 255, 255, 0.64);
 }
-.lang-switch-language:last-child {
+.language-btn:last-child {
     border-bottom: none;
 }
 
@@ -112,7 +112,6 @@ button {
     top: calc(100% + 8px);
 
     background-color: #fff;
-    padding: 0.75rem;
     border-radius: 0.25rem;
 
     box-shadow: 0 2px 4px 0 rgba(255, 255, 255, .1);
@@ -128,6 +127,36 @@ button {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+
+    background-color: transparent;
+    margin: 16px 13px 16px 16px;
+}
+.current-language::after {
+    content: '';
+    background-image: url('/Main/img/icons/checkmark.svg');
+    width: 12px;
+    height: 9px;
+
+    margin-left: 12px;
+}
+.lang-switch__line {
+    height: 1px;
+    background-color: rgb(48, 48, 48, 0.1);
+}
+.language-btn:not(.language-btn.current-language) {
+    margin-right: 0px;
+}
+.language-btn__flag svg {
+    vertical-align: middle;
+    text-align: center;
+}
+.language-btn__text {
+    margin-left: 8px;
 }
 
 .caret {
