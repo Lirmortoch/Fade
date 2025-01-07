@@ -1,13 +1,4 @@
 // for dropdowns
-function dropContentOnMiddle(currentDropDown) {
-    const button = currentDropDown.querySelector('[data-dropdown-button]');
-    const content = currentDropDown.querySelector('.dropdown-content');
-
-    const buttonPosition = button.getBoundingClientRect();
-
-    content.style.right = `${0}px`;
-}
-
 function keepOpenDropMenu(e) {
     const isDropDownButton = e.target.matches('[data-dropdown-button]');
 
@@ -19,8 +10,6 @@ function keepOpenDropMenu(e) {
         currentDropDown = e.target.closest('[data-dropdown]');
         currentDropDown.classList.toggle('active');
         currentDropDown.querySelector('.caret').classList.toggle('caret__rotate');
-
-        dropContentOnMiddle(currentDropDown);
     }
 
     document.querySelectorAll('[data-dropdown].active').forEach(dropDown => {
@@ -35,16 +24,19 @@ document.addEventListener('click', keepOpenDropMenu);
 
 // Switch language 
 function switchLanguage(e) {
-    if (!e.target.classList.contains('language-btn') || e.target.classList.contains('current-language')) return;
+    let closestElem = e.target.closest('.language-btn:not(.language-btn.current-language)');
+
+    if (!closestElem || e.target.classList.contains('current-language')) return;
+
+    let target = e.target.value ? e.target : closestElem;
 
     const prevLanguage = document.querySelector('.current-language');
     const buttonLanguage = document.querySelector('.dropdown__button');
 
     prevLanguage.classList.remove('current-language');
+    buttonLanguage.innerHTML = target.value + '<span class="lang-switch-btn__arrow caret caret__rotate"></span>';
     
-    buttonLanguage.textContent = e.target.value;
-    
-    e.target.classList.add('current-language');
+    target.classList.add('current-language');
 }
 
-document.addEventListener('click', switchLanguage);
+document.addEventListener('click', switchLanguage); 

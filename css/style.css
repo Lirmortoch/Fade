@@ -39,6 +39,7 @@ button {
     height: 145px;
 }
 .header__logo {
+    z-index: 20;
     background-color: var(--main-color);
     height: 100%;
 }
@@ -48,12 +49,15 @@ button {
 .header__nav {
     
 }
-.menu {
+.menu__wrap {
     display: flex;
     justify-content: space-between;
     gap: 6.354vw;
 }
 .menu__icon {
+    display: none;
+}
+.menu-mobile {
     display: none;
 }
 .nav {
@@ -65,10 +69,10 @@ button {
 .uppercase {
     text-transform: uppercase;
 }
-.current {
+.current-page {
     position: relative;
 }
-.current::after {
+.current-page::after {
     content: '';
 
     height: 0.889em;
@@ -83,9 +87,7 @@ button {
     background-color: var(--third-color);
     opacity: 0.75;
 }
-.header__lang-switch {
-    
-}
+
 .lang-switch__button {
     opacity: 0.64;
     background-color: transparent;
@@ -110,6 +112,7 @@ button {
 .dropdown__menu {
     position: absolute;
     top: calc(100% + 8px);
+    right: 0;
 
     background-color: #fff;
     border-radius: 0.25rem;
@@ -175,10 +178,11 @@ button {
 
 .wrap {
     position: relative;
+    min-height: 100%;
     margin: 0 auto 0 40px;
     display: grid;
     grid-template-columns: auto 1fr 33.018vw;
-    grid-template-rows: 27px 1fr
+    grid-template-rows: 27px repeat(2, min-content);
 }
 .bfw {
     width: 70vw;
@@ -201,7 +205,7 @@ button {
     gap: 40px;
 
     
-    grid-row: 1 / 4;
+    grid-row: 1 / -1;
 }
 
 .left-side-decor__line {
@@ -232,6 +236,7 @@ button {
 }
 
 .data__value {
+    font-size: 18px;
     margin: 0 23px 0 0;
 }
 
@@ -250,15 +255,22 @@ button {
 }
 
 .main-wrap {
-    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+    grid-row: 3 / -1;
 }
 
-.main__tag {
+.main-title-block {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    height: fit-content;
+}
+
+.mtb__tag {
     color: var(--third-color);
-    margin: 8.333vw 0 0 0;
+    margin: 6.927vw 0 0 0;
 }
 
-.main__title {
+.mtb__title {
     margin: 16px 0 0 0;
 }
 
@@ -313,6 +325,7 @@ button {
     min-width: 274px;
 
     height: 8.611vh;
+    max-height: 93px;
     min-height: 68px;
 }
 
@@ -349,8 +362,8 @@ button {
 }
 
 .right-side-decor {
-    grid-row: 2 / 3;
-    height: 49.219vw;
+    grid-row: 2 / -1;
+    grid-column: 3 / -1;
 }
 
 .right-side-decor__wrap {
@@ -415,6 +428,7 @@ button {
 }
 
 .footer {
+    width: fit-content;
     margin: 7.188vw 0 2.5vw 0;
 }
 
@@ -445,7 +459,7 @@ button {
 }
 
 @media screen and (max-width: 1900px) {
-  .main__tag {
+  .mtb__tag {
     margin-top: 5.833vw;
   }
   .bfw {
@@ -461,7 +475,7 @@ button {
     .main__about {
         gap: 2em;
     }
-    .main__title {
+    .mtb__title {
         font-size: 3.5em;
     }
     .footer {
@@ -481,7 +495,7 @@ button {
     }
 }
 @media screen and (max-width: 1500px) {
-    .main__title {
+    .mtb__title {
         font-size: 3.5em;
     }
     .main__about {
@@ -492,21 +506,19 @@ button {
     .about__line {
        display: none;
     }
-    .footer {
-        display: none;
-    }
-    .menu {
-        display: none;
-    }
     .bfw {
         left: -3.3vw;
         top: 5.4vw;
     }
-    .menu__icon {
-        display: block;
+    
+    /* .menu__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 44px;
         height: 44px;
-    }
+    } */
+
     .menu__icon-wrap {
         z-index: 15;
         position: relative;
@@ -514,6 +526,7 @@ button {
         height: fit-content;
         width: fit-content;
     }
+
     .menu__icon-wrap::after, .menu__icon-wrap::before, .menu__icon-wrap span {
         height: 3px;
         display: block;
@@ -526,17 +539,31 @@ button {
 
         background-color: #ffffff;
     }
+
     .menu__icon-wrap::after, .menu__icon-wrap::before {
         content: '';
         width: 28px;
     }
+    
     .menu__icon-wrap::after {
       margin: 0;
     }
+    
     .menu__icon-wrap span {
         width: 19.38px;
         margin-left: auto;
     }
+
+    /* .footer {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    } */
 }
 @media screen and (max-width: 1399px) {
     
