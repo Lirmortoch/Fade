@@ -193,6 +193,7 @@ button {
 }
 .bfw img {
     width: 100%;
+    height: 100%;
 }
 
 .left-side-decor {
@@ -475,7 +476,7 @@ button {
     .main__about {
         gap: 2em;
     }
-    .mtb__title {
+    .title {
         font-size: 3.5em;
     }
     .footer {
@@ -495,9 +496,6 @@ button {
     }
 }
 @media screen and (max-width: 1500px) {
-    .mtb__title {
-        font-size: 3.5em;
-    }
     .main__about {
         margin-top: 3em;
         flex-flow: column nowrap;
@@ -511,14 +509,43 @@ button {
         top: 5.4vw;
     }
     
-    /* .menu__icon {
+    .right-side-decor {
+        grid-row: 3 / 4;
+    }
+    .main-title-block {
+        grid-column: 2 / 4;
+    }
+
+    .mtb__tag {
+        margin-top: 37px;
+    }
+    .main__about {
+        margin-top: 6px;
+    }
+    .mtb__title {
+        margin-bottom: 74px;
+    }
+}
+@media screen and (max-width: 1299px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .footer, .menu, .left-side-decor {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu__icon {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 44px;
         height: 44px;
-    } */
-
+    } 
     .menu__icon-wrap {
         z-index: 15;
         position: relative;
@@ -526,7 +553,6 @@ button {
         height: fit-content;
         width: fit-content;
     }
-
     .menu__icon-wrap::after, .menu__icon-wrap::before, .menu__icon-wrap span {
         height: 3px;
         display: block;
@@ -539,32 +565,37 @@ button {
 
         background-color: #ffffff;
     }
-
     .menu__icon-wrap::after, .menu__icon-wrap::before {
         content: '';
         width: 28px;
     }
-    
     .menu__icon-wrap::after {
       margin: 0;
     }
-    
     .menu__icon-wrap span {
         width: 19.38px;
         margin-left: auto;
     }
-
-    /* .footer {
-        display: none;
+    .bfw {
+        left: -4.8vw;
     }
-    .menu {
-        display: none;
+    .title {
+        font-size: 3em;
     }
-
-    .menu-mobile {
-        display: block;
-    } */
 }
-@media screen and (max-width: 1399px) {
-    
+@media screen and (max-width: 1164px) {
+    .bfw {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 799px) {
+    body, .bfw {
+        overflow-x: hidden;
+    }
+    .bfw {
+        width: 119.792vw;
+        height: 49.219vh;
+        top: 4vw;
+        left: -8.5vw;
+    }
 }
