@@ -179,7 +179,9 @@ button {
 .wrap {
     position: relative;
     min-height: 100%;
-    margin: 0 auto 0 40px;
+    margin: 0 auto 0 0px;
+    padding-left: 40px;
+
     display: grid;
     grid-template-columns: auto 1fr 33.018vw;
     grid-template-rows: 27px repeat(2, min-content);
@@ -188,7 +190,7 @@ button {
     width: 70vw;
     position: absolute;
     top: 4.427vw;
-    left: -2.2vw;
+    left: 0;
     z-index: -1;
 }
 .bfw img {
@@ -239,6 +241,9 @@ button {
 .data__value {
     font-size: 18px;
     margin: 0 23px 0 0;
+}
+.data__hor-line {
+    display: none;
 }
 
 .bold {
@@ -378,7 +383,7 @@ button {
 
 .right-side-decor__frame {
     height: 46.758vw;
-    
+    position: relative;
     grid-row: 1 / 3;
 }
 
@@ -483,7 +488,7 @@ button {
         margin-bottom: 1.294vw;
     }
     .bfw {
-        left: -2.6vw;
+        /* left: -2.6vw; */
         top: 4.8vw;
     }
 }
@@ -505,7 +510,7 @@ button {
        display: none;
     }
     .bfw {
-        left: -3.3vw;
+        /* left: -3.3vw; */
         top: 5.4vw;
     }
     
@@ -527,11 +532,16 @@ button {
     }
 }
 @media screen and (max-width: 1299px) {
-    body {
+    .wrap {
         overflow-x: hidden;
     }
+ 
+    .right-side-decor__photo, .right-side-decor__frame {
+        object-fit: cover;
+        right: -80px;
+    }
 
-    .footer, .menu, .left-side-decor {
+    .footer, .menu {
         display: none;
     }
 
@@ -577,10 +587,54 @@ button {
         margin-left: auto;
     }
     .bfw {
-        left: -4.8vw;
+        left: -1.6vw;
     }
     .title {
         font-size: 3em;
+    }
+
+    /* Left decor element */
+    .left-side-decor {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+        position: relative;
+    }
+    .left-side-decor__data {
+        transform: none;
+
+        align-self: self-end;
+
+        width: max-content;
+
+        align-items: center;
+        gap: 16px;
+
+        opacity: 0.5;
+
+        position: absolute;
+        right: -75px;
+
+        margin: 24px 0;
+    }
+    .data__hor-line {
+        display: block;
+        width: 100px;
+        background-color: white;
+        height: 1px;
+    }
+
+    .top-line, .data__arrows, .bottom-line {
+        display: none;
+    }
+    .data__value {
+        margin: 0;
+    }
+    .data__value span:first-child {
+        margin-right: 10px;
+    }
+    .data__value span:last-child {
+        margin-left: 10px;
     }
 }
 @media screen and (max-width: 1164px) {
@@ -589,13 +643,10 @@ button {
     }
 }
 @media screen and (max-width: 799px) {
-    body, .bfw {
-        overflow-x: hidden;
-    }
     .bfw {
         width: 119.792vw;
-        height: 49.219vh;
         top: 4vw;
-        left: -8.5vw;
+        /* left: -8.5vw; */
+        object-fit: cover;
     }
 }
