@@ -537,8 +537,7 @@ button {
     }
  
     .right-side-decor__photo, .right-side-decor__frame {
-        object-fit: cover;
-        right: -80px;
+        right: -82px;
     }
 
     .footer, .menu {
@@ -640,6 +639,11 @@ button {
 @media screen and (max-width: 1164px) {
     .bfw {
         width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .left-side-decor__data {
+        display: none;
     }
 }
 @media screen and (max-width: 799px) {

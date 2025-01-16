@@ -39,4 +39,4 @@ function switchLanguage(e) {
     target.classList.add('current-language');
 }
 
-document.addEventListener('click', switchLanguage); 
+document.addEventListener('click', switchLanguage);
