@@ -537,7 +537,7 @@ button {
     }
  
     .right-side-decor__photo, .right-side-decor__frame {
-        right: -82px;
+        width: max(53vw, 470px);
     }
 
     .footer, .menu {
@@ -635,16 +635,19 @@ button {
     .data__value span:last-child {
         margin-left: 10px;
     }
+    
+    .right-side-decor__frame {
+        height: 100%;
+        left: -55px;
+    }
 }
 @media screen and (max-width: 1164px) {
     .bfw {
         width: 100%;
     }
 }
-@media screen and (max-width: 900px) {
-    .left-side-decor__data {
-        display: none;
-    }
+@media screen and (max-width: 930px) {
+
 }
 @media screen and (max-width: 799px) {
     .bfw {
