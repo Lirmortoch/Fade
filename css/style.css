@@ -54,7 +54,7 @@ button {
     justify-content: space-between;
     gap: 6.354vw;
 }
-.menu__icon {
+.menu__toggler {
     display: none;
 }
 
@@ -401,7 +401,7 @@ button {
     width: 43.469px;
 
     position: absolute;
-    z-index: 9;
+    z-index: 2;
     bottom: 5.1%;
     right: 12.4%;
     
@@ -537,6 +537,10 @@ button {
     }
 }
 @media screen and (max-width: 1299px) {
+    body.mobile-lock {
+        overflow: hidden;
+    }
+
     .wrap {
         overflow-x: hidden;
     }
@@ -576,11 +580,11 @@ button {
     }
 
     .header__logo {
-        z-index: 11;
+        z-index: 4;
     }
 
-    .bfw {
-        z-index: 2;
+    body.mobile-lock .bfw {
+        
     }
 
     .header {
@@ -594,14 +598,19 @@ button {
 
     .header__menu {
         position: fixed;
-        z-index: 10;
+        z-index: 3;
         top: 0;
-        left: 0%;
+        left: 100%;
         width: 100%;
         height: 100%;
         background: linear-gradient(-21deg, #654EA3 25%, #5F4B8B 100%) 87%;
         padding: 160px 30px 30px 30px;
         transition: left 0.3s ease 0s;
+
+        overflow: auto;
+    }
+    .header__menu.active-mobile {
+        left: 0%;
     }
 
     .menu__wrap {
@@ -638,21 +647,22 @@ button {
         display: block;
     }
 
-    .menu__icon {
+    .menu__toggler {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 44px;
         height: 44px;
+        background-color: transparent;
     } 
-    .menu__icon-wrap {
-        z-index: 15;
+    .menu__toggler-wrap {
+        z-index: 5;
         position: relative;
         cursor: pointer;
         height: fit-content;
         width: fit-content;
     }
-    .menu__icon-wrap::after, .menu__icon-wrap::before, .menu__icon-wrap span {
+    .menu__toggler-wrap::after, .menu__toggler-wrap::before, .menu__toggler-wrap span {
         height: 3px;
         display: block;
         border-radius: 3px;
@@ -664,14 +674,14 @@ button {
 
         background-color: #ffffff;
     }
-    .menu__icon-wrap::after, .menu__icon-wrap::before {
+    .menu__toggler-wrap::after, .menu__toggler-wrap::before {
         content: '';
         width: 28px;
     }
-    .menu__icon-wrap::after {
+    .menu__toggler-wrap::after {
       margin: 0;
     }
-    .menu__icon-wrap span {
+    .menu__toggler-wrap span {
         width: 19.38px;
         margin-left: auto;
     }
@@ -737,7 +747,7 @@ button {
 @media screen and (max-width: 799px) {
     .bfw {
         width: 119.792vw;
-        top: 4vw;
+        top: 3vw;
         object-fit: cover;
     }
 }

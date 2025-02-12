@@ -40,3 +40,18 @@ function switchLanguage(e) {
 }
 
 document.addEventListener('click', switchLanguage);
+
+function toggleMobileMenu(e) {
+    const closestElem = e.target.closest('.menu__toggler');
+
+    if (!closestElem) return;
+
+    const nav = document.querySelector('.header__menu');
+    const navIcon = closestElem.tagName === 'BUTTON' ? closestElem : closestElem.parentElement;
+
+    nav.classList.toggle('active-mobile');
+    navIcon.classList.toggle('active-mobile');
+    document.querySelector('body').classList.toggle('mobile-lock');
+}
+
+document.addEventListener('click', toggleMobileMenu);
