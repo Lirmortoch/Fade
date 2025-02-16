@@ -583,10 +583,6 @@ button {
         z-index: 4;
     }
 
-    body.mobile-lock .bfw {
-        
-    }
-
     .header {
         justify-content: start;
     }
@@ -688,6 +684,11 @@ button {
     .bfw {
         left: -1.6vw;
     }
+    .mobile-bfw {
+        width: 122vw;
+        top: 180px;
+        left: -6.0vw;
+    }
     .title {
         font-size: 3em;
     }
@@ -737,7 +738,7 @@ button {
     }
 }
 @media screen and (max-width: 1164px) {
-    .bfw {
+    .bfw:not(.mobile-bfw) {
         width: 100%;
     }
 }
@@ -747,7 +748,9 @@ button {
 @media screen and (max-width: 799px) {
     .bfw {
         width: 119.792vw;
-        top: 3vw;
         object-fit: cover;
+    }
+    .bfw:not(.mobile-bfw) {
+        top: 3vw;
     }
 }
