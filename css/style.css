@@ -46,9 +46,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    min-width: 108px;
 }
 .header__logo img {
     width: 69.169%;
+    min-width: 80.93px;
 }
 .header__nav {
     
@@ -589,6 +592,10 @@ button {
     .header__logo {
         z-index: 4;
     }
+    
+    .header__logo img {
+        width: 74.637%;
+    }
 
     .header {
         justify-content: start;
@@ -690,6 +697,8 @@ button {
     }
     .bfw {
         left: -2.6vw;
+        width: 119.792vw;
+        object-fit: cover;
     }
     .mobile-bfw {
         width: 122vw;
@@ -760,5 +769,8 @@ button {
     }
     .header {
         height: 72px;
+    }
+    .left-side-decor {
+        display: none;
     }
 }
