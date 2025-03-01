@@ -55,3 +55,12 @@ function toggleMobileMenu(e) {
 }
 
 document.addEventListener('click', toggleMobileMenu);
+
+function mobileSwitchLanguage(e) {
+    if (!e.target.classList.contains('mobile-lang-switch__button') || e.target.classList.contains('current-language-mobile')) return;
+
+    document.querySelector('.current-language-mobile').classList.remove('current-language-mobile');
+    e.target.classList.add('current-language-mobile');
+}
+
+document.addEventListener('click', mobileSwitchLanguage);
