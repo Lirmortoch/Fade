@@ -500,9 +500,6 @@ button {
     }
 }
 @media screen and (max-width: 1600px) {
-    body {
-        font-size: 1em;
-    }
     .footer {
         margin-top: 6.125vw;
     }
@@ -523,9 +520,6 @@ button {
     
     .right-side-decor {
         grid-row: 3 / 4;
-    }
-    .main-title-block {
-        grid-column: 2 / 4;
     }
 
     .mtb__tag {
@@ -594,7 +588,7 @@ button {
     }
     
     .header__logo img {
-        width: 74.637%;
+        width: 74.786%;
     }
 
     .header {
@@ -706,7 +700,7 @@ button {
         left: -4vw;
     }
     .title {
-        font-size: 3em;
+        font-size: 3.111em;
     }
 
     /* Left decor element */
@@ -753,9 +747,6 @@ button {
         margin-left: 10px;
     }
 }
-@media screen and (max-width: 1164px) {
-    
-}
 @media screen and (max-width: 930px) {
     
 }
@@ -770,7 +761,55 @@ button {
     .header {
         height: 72px;
     }
+    .footer {
+        display: none;
+    }
+    .main__buy-tickets {
+        width: 274px;
+        height: 68px;
+    }
+    .title {
+        font-size: 1.7778em;
+    }
+}
+@media screen and (max-width: 599px) {
+    .header {
+        margin-left: 16px;
+    }
+    .wrap {
+        padding-left: 16px;
+    }
     .left-side-decor {
+        display: none;
+    }
+}
+@media screen and (max-width: 499px) {
+    .right-side-decor {
+        display: none;
+    }
+    .main-wrap {
+        grid-column: 1 / -1;
+    }
+    .mtb__title {
+        margin-bottom: 40px;
+        margin-top: 8px;
+    }
+    .mtb__tag {
+        margin-top: 13px;
+    }
+    .main__about {
+        margin-top: 0px;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 399px) {
+    .header {
+        margin-left: 0px;
+        justify-content: space-between;
+    }
+    .mobile-lang-switch {
         display: none;
     }
 }
