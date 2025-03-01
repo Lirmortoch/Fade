@@ -607,12 +607,24 @@ button {
         left: 100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(-21deg, #654EA3 25%, #5F4B8B 100%) 87%;
+        background: linear-gradient(-21deg, #654EA3 25%, #5F4B8B 100%) 87%; 
         padding: 160px 30px 30px 30px;
         transition: left 0.3s ease 0s;
 
         overflow: auto;
     }
+    
+    .header__menu::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 92px;
+        background: linear-gradient(152deg, rgb(101, 78, 163) 24.86%, rgb(95, 75, 139) 100%);
+        z-index: 3;
+    }
+
     .header__menu.active-mobile {
         left: 0%;
     }
@@ -747,9 +759,6 @@ button {
         margin-left: 10px;
     }
 }
-@media screen and (max-width: 930px) {
-    
-}
 @media screen and (max-width: 799px) {
     .bfw {
         width: 119.792vw;
@@ -758,7 +767,7 @@ button {
     .bfw:not(.mobile-bfw) {
         top: max(3vw, 25px);
     }
-    .header {
+    .header, .header__menu::before {
         height: 72px;
     }
     .footer {
