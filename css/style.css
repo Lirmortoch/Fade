@@ -782,7 +782,7 @@ button {
 }
 @media screen and (max-width: 599px) {
     .header {
-        margin-left: 16px;
+        margin: 0 16px;
     }
     .wrap {
         padding-left: 16px;
