@@ -48,9 +48,12 @@ function toggleMobileMenu(e) {
 
     const nav = document.querySelector('.header__menu');
     const navIcon = closestElem.tagName === 'BUTTON' ? closestElem : closestElem.parentElement;
+    const mobileHeaderBack = document.querySelector('.menu__mobile-back');
 
     nav.classList.toggle('active-mobile');
     navIcon.classList.toggle('active-mobile');
+    mobileHeaderBack.classList.toggle('active-mobile');
+    
     document.querySelector('body').classList.toggle('mobile-lock');
 }
 
